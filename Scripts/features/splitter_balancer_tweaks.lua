@@ -501,6 +501,12 @@ local function CleanTrackedEnvs()
                     if not slot then
                         st.readErr = st.readErr + 1
                         if not st.firstErr then st.firstErr = slotErr end
+                        -- If no UObject anchor exists within +2GB below this TArray buffer, abort this env pass
+                        -- immediately instead of repeating FindAllOf scans for every remaining collider!
+                        if type(slotErr) == "string" and slotErr:find("no UObject anchor", 1, true) then
+                            st.i = st.num + 1
+                            break
+                        end
                     else
                         local anchorObj = slot.anchor.obj
                         local okRead, gotCid, oldMin, oldMax = pcall(function()
