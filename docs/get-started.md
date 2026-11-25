@@ -43,15 +43,15 @@ Choose either **MSCoreManager** (recommended) or **Manual UE4SS Installation** b
      ```
 2. **Install Elvenide's Compact Splitters**:
    - Download **$(System.Collections.Hashtable.ZipBase)-v<version>.zip** from [github.com/Elvenide/MainSequenceCompactSplitters/releases](https://github.com/Elvenide/MainSequenceCompactSplitters/releases).
-   - Open the zip, navigate into its `Mods\` folder, and copy the `MainSequenceCompactSplitters` folder into:
+   - Open the zip, navigate into its `Mods\` folder, and copy the `ElvenidesCompactSplitters` folder into:
      ```
-     Main Sequence\Windows\MainSequence\Binaries\Win64\ue4ss\Mods\MainSequenceCompactSplitters\
+     Main Sequence\Windows\MainSequence\Binaries\Win64\ue4ss\Mods\ElvenidesCompactSplitters\
      ```
-     *(You can safely leave `mscore.mod` inside `MainSequenceCompactSplitters\`—UE4SS ignores it.)*
-   - Ensure `MainSequenceCompactSplitters\enabled.txt` exists (an empty file is fine).
-   - Open `ue4ss\Mods\mods.txt` and add `MainSequenceCompactSplitters : 1` **above** `Keybinds : 1`:
+     *(You can safely leave `mscore.mod` inside `ElvenidesCompactSplitters\`—UE4SS ignores it.)*
+   - Ensure `ElvenidesCompactSplitters\enabled.txt` exists (an empty file is fine).
+   - Open `ue4ss\Mods\mods.txt` and add `ElvenidesCompactSplitters : 1` **above** `Keybinds : 1`:
      ```ini
-     MainSequenceCompactSplitters : 1
+     ElvenidesCompactSplitters : 1
 
      ; Built-in keybinds, do not move up!
      Keybinds : 1
@@ -61,5 +61,5 @@ Choose either **MSCoreManager** (recommended) or **Manual UE4SS Installation** b
 
 ## Uninstalling
 
-- Remove or rename `MainSequenceCompactSplitters\enabled.txt` (or delete the `MainSequenceCompactSplitters` folder and remove `MainSequenceCompactSplitters : 1` from `mods.txt`).
+- Remove or rename `ElvenidesCompactSplitters\enabled.txt` (or delete the `ElvenidesCompactSplitters` folder and remove `ElvenidesCompactSplitters : 1` from `mods.txt`).
 - Your saves remain completely intact with no missing-mod dependencies.
